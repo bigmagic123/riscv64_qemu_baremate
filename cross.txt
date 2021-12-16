@@ -1,0 +1,19 @@
+[constants]
+cross_pass = '/home/zhaofujin/RISCV/learn/01_start/bin/riscv64-unknown-elf-' 
+
+[binaries]
+c = cross_pass + 'gcc'
+cpp = cross_pass + 'g++'
+ar = cross_pass + 'ar'
+strip = cross_pass + 'strip'
+
+[properties]
+objcopy = cross_pass + 'objcopy'
+objdump = cross_pass + 'objdump'
+needs_exe_wrapper = true
+
+[host_machine]
+system = 'bare metal'
+cpu_family = 'riscv64'
+cpu = 'qemu-riscv64-virt'
+endian = 'little'
