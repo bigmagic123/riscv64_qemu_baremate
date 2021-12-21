@@ -9,7 +9,7 @@ subdir( 'application' )
 subdir( 'driver' )
 subdir( 'src' )
 
-add_project_arguments('-march=rv64gc' ,'-mabi=lp64d','-fno-omit-frame-pointer', '-nostartfiles', '-MD', '-mcmodel=medany', '-ffreestanding', '-fno-common' ,'-nostdlib', '-mno-relax', language: 'c')
+add_project_arguments('-O2', '-march=rv64gcv_zba_zbb_zbc_zbs' ,'-mabi=lp64d','-fno-omit-frame-pointer', '-nostartfiles', '-MD', '-mcmodel=medany', '-ffreestanding', '-fno-common' ,'-nostdlib', '-mno-relax', language: 'c')
 
 linker_script = join_paths(meson.current_source_dir(), 'link.ld')
 linker_script_board = join_paths(meson.current_source_dir(), 'configs/link_board.lds')
